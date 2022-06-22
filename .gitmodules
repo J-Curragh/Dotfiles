@@ -1,0 +1,3 @@
+[submodule "Pandoc/.pandoc/templates/eisvogel"]
+	path = Pandoc/.pandoc/templates/eisvogel
+	url = https://github.com/Wandmalfarbe/pandoc-latex-template.git
