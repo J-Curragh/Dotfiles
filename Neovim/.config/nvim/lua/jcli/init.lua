@@ -6,4 +6,6 @@ require("jcli.plugins")
 require("jcli.cmp")
 -- Enable LSP
 require("jcli.lsp")
+-- Enable treesitter
+require("jcli.treesitter")
 
