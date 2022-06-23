@@ -1,4 +1,3 @@
-local previewers = require("telescope.previewers")
 local actions = require("telescope.actions")
 
 local M = {}
