@@ -8,4 +8,6 @@ require("jcli.cmp")
 require("jcli.lsp")
 -- Enable treesitter
 require("jcli.treesitter")
+-- Enable Trouble
+require("jcli.trouble")
 

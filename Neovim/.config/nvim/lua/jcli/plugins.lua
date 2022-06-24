@@ -19,6 +19,11 @@ return packer.startup(function(use)
       after = "telescope.nvim"
   })
 
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+  }
+
   -- Vim-style magit
   use({
       "TimUntersberger/neogit",
