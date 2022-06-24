@@ -132,10 +132,8 @@ _G.packer_plugins = {
     url = "https://github.com/TimUntersberger/neogit"
   },
   ["null-ls.nvim"] = {
-    load_after = {},
     loaded = true,
-    needs_bufread = false,
-    path = "/home/jcli/.local/share/nvim/site/pack/packer/opt/null-ls.nvim",
+    path = "/home/jcli/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-autopairs"] = {
@@ -169,6 +167,11 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/home/jcli/.local/share/nvim/site/pack/packer/opt/nvim-ts-rainbow",
     url = "https://github.com/p00f/nvim-ts-rainbow"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/home/jcli/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -205,6 +208,11 @@ _G.packer_plugins = {
     path = "/home/jcli/.local/share/nvim/site/pack/packer/opt/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "/home/jcli/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
+  },
   ["vim-floaterm"] = {
     loaded = true,
     path = "/home/jcli/.local/share/nvim/site/pack/packer/start/vim-floaterm",
@@ -228,7 +236,6 @@ vim.cmd [[ packadd cmp_luasnip ]]
 vim.cmd [[ packadd nvim-treesitter ]]
 vim.cmd [[ packadd nvim-ts-rainbow ]]
 vim.cmd [[ packadd plenary.nvim ]]
-vim.cmd [[ packadd null-ls.nvim ]]
 vim.cmd [[ packadd neogit ]]
 vim.cmd [[ packadd telescope.nvim ]]
 vim.cmd [[ packadd telescope-project.nvim ]]
