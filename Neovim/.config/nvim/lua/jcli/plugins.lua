@@ -59,6 +59,9 @@ return packer.startup(function(use)
   })
   use({"p00f/nvim-ts-rainbow", after = "nvim-treesitter"})
 
+  -- Linting
+  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+
   -- Discord Rich Presence
   use("andweeb/presence.nvim")
 

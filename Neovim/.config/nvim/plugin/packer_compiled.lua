@@ -131,6 +131,13 @@ _G.packer_plugins = {
     path = "/home/jcli/.local/share/nvim/site/pack/packer/opt/neogit",
     url = "https://github.com/TimUntersberger/neogit"
   },
+  ["null-ls.nvim"] = {
+    load_after = {},
+    loaded = true,
+    needs_bufread = false,
+    path = "/home/jcli/.local/share/nvim/site/pack/packer/opt/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/home/jcli/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
@@ -206,24 +213,25 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: gitsigns.nvim
-time([[Config for gitsigns.nvim]], true)
-try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
-time([[Config for gitsigns.nvim]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
 time([[Config for Comment.nvim]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
+time([[Config for gitsigns.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
-vim.cmd [[ packadd plenary.nvim ]]
-vim.cmd [[ packadd neogit ]]
-vim.cmd [[ packadd telescope.nvim ]]
-vim.cmd [[ packadd telescope-project.nvim ]]
 vim.cmd [[ packadd LuaSnip ]]
 vim.cmd [[ packadd cmp_luasnip ]]
 vim.cmd [[ packadd nvim-treesitter ]]
 vim.cmd [[ packadd nvim-ts-rainbow ]]
+vim.cmd [[ packadd plenary.nvim ]]
+vim.cmd [[ packadd null-ls.nvim ]]
+vim.cmd [[ packadd neogit ]]
+vim.cmd [[ packadd telescope.nvim ]]
+vim.cmd [[ packadd telescope-project.nvim ]]
 time([[Sequenced loading]], false)
 if should_profile then save_profiles() end
 

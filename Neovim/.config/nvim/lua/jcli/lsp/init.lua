@@ -21,3 +21,5 @@ installer.on_server_ready(function(server)
   server:setup(opts)
 end)
 
+require("jcli.lsp.handlers").setup()
+require("jcli.lsp.null-ls")
