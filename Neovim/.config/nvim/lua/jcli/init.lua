@@ -10,4 +10,6 @@ require("jcli.lsp")
 require("jcli.treesitter")
 -- Enable Trouble
 require("jcli.trouble")
+-- Enable lualine
+require("jcli.lualine")
 
