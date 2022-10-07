@@ -1,4 +1,4 @@
-# Dotfiles for my Linux systems.
+# Dotfiles for my Unix systems.
 
 Use the branches to switch between system dotfiles.
 
