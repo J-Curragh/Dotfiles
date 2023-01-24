@@ -74,6 +74,12 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0" },
+    loaded = true,
+    path = "/Users/jcli/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/Users/jcli/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -134,6 +140,13 @@ _G.packer_plugins = {
     path = "/Users/jcli/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["markdown-preview.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/Users/jcli/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/Users/jcli/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -143,6 +156,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jcli/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["nim.nvim"] = {
+    loaded = true,
+    path = "/Users/jcli/.local/share/nvim/site/pack/packer/start/nim.nvim",
+    url = "https://github.com/alaviss/nim.nvim"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -204,10 +222,10 @@ _G.packer_plugins = {
     path = "/Users/jcli/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["prettier.nvim"] = {
+  ["refactoring.nvim"] = {
     loaded = true,
-    path = "/Users/jcli/.local/share/nvim/site/pack/packer/start/prettier.nvim",
-    url = "https://github.com/MunifTanjim/prettier.nvim"
+    path = "/Users/jcli/.local/share/nvim/site/pack/packer/start/refactoring.nvim",
+    url = "https://github.com/ThePrimeagen/refactoring.nvim"
   },
   ["rust-tools.nvim"] = {
     loaded = true,
@@ -225,7 +243,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["trouble.nvim"] = {
-    config = { "\27LJ\2\n]\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\25use_diagnostic_signs\2\14auto_open\1\nsetup\ftrouble\frequire\0" },
+    config = { "\27LJ\2\n]\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\14auto_open\1\25use_diagnostic_signs\2\nsetup\ftrouble\frequire\0" },
     loaded = true,
     path = "/Users/jcli/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
@@ -239,14 +257,34 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jcli/.local/share/nvim/site/pack/packer/start/vimtex",
     url = "https://github.com/lervag/vimtex"
+  },
+  vimwiki = {
+    loaded = true,
+    path = "/Users/jcli/.local/share/nvim/site/pack/packer/start/vimwiki",
+    url = "https://github.com/vimwiki/vimwiki"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Setup for: markdown-preview.nvim
+time([[Setup for markdown-preview.nvim]], true)
+try_loadstring("\27LJ\2\n=\0\0\2\0\4\0\0056\0\0\0009\0\1\0005\1\3\0=\1\2\0K\0\1\0\1\2\0\0\rmarkdown\19mkdp_filetypes\6g\bvim\0", "setup", "markdown-preview.nvim")
+time([[Setup for markdown-preview.nvim]], false)
+-- Config for: Comment.nvim
+time([[Config for Comment.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
+time([[Config for Comment.nvim]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
-try_loadstring("\27LJ\2\n]\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\25use_diagnostic_signs\2\14auto_open\1\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+try_loadstring("\27LJ\2\n]\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\14auto_open\1\25use_diagnostic_signs\2\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Filetype lazy-loads
+time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
+time([[Defining lazy-load filetype autocommands]], false)
+vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

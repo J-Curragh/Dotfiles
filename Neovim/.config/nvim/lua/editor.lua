@@ -13,6 +13,8 @@ vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 
+vim.opt.scrolloff = 13
+
 vim.opt.ai = true
 vim.opt.si = true
 
